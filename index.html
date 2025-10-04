@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUFFER - Personal Finance Advisor</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#10b981',secondary:'#f59e0b'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-['Pacifico'] text-gray-900">PUFFER</span>
+                    </div>
+                    <nav class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#" class="text-gray-900 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Getting started</a>
+                        <a href="#" class="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">Categories</a>
+                        <a href="#" class="text-gray-500 hover:text-primary px-3 py-2 text-sm font-medium cursor-pointer">News</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center">
+                        <div class="relative">
+                            <input type="text" placeholder="Search..." class="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <div class="absolute left-3 top-2.5 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-search-line text-gray-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-2 !rounded-button text-sm font-medium hover:bg-green-600 transition-colors cursor-pointer">
+                        Contact us
+                    </button>
+                    <button class="md:hidden w-8 h-8 flex items-center justify-center cursor-pointer">
+                        <i class="ri-menu-line text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Content -->
+            <div class="flex-1">
+                <!-- Hero Section -->
+                <section class="mb-16">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
+                        <div class="flex-1">
+                            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                                BECOME<br>
+                                <span class="text-secondary">YOUR OWN</span><br>
+                                FINANCIAL ADVISOR
+                            </h1>
+                            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                                Everything personal finance - explained, reviewed and compared in simple terms. Fast and digestible.
+                            </p>
+                            <p class="text-gray-600 mb-8">
+                                Sign up to our newsletter and manage your money with confidence.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                                <input type="email" placeholder="Email address" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <button class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-yellow-600 transition-colors cursor-pointer">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                No spam, unsubscribe any time. By signing up you agree to our terms.
+                            </p>
+                            <p class="text-sm text-gray-600 mt-4">
+                                Join <strong>1000s of happy readers</strong> worldwide
+                            </p>
+                        </div>
+                        <div class="flex-1 relative">
+                            <img src="https://readdy.ai/api/search-image?query=Modern%20financial%20dashboard%20mobile%20app%20interface%20showing%20investment%20portfolio%20with%20charts%20graphs%20and%20currency%20symbols%2C%20clean%20UI%20design%20with%20green%20and%20blue%20color%20scheme%2C%20professional%20financial%20technology%20illustration%2C%20high%20quality%203D%20rendering&width=500&height=400&seq=hero1&orientation=landscape" alt="Financial Dashboard" class="w-full h-auto rounded-xl shadow-lg object-cover">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Start Journey Section -->
+                <section class="bg-gray-50 rounded-2xl p-8 mb-16">
+                    <h2 class="text-2xl font-bold text-gray-900 text-center mb-12">Start your journey today</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-white rounded-xl shadow-sm flex items-center justify-center">
+                                <img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%20calculator%20with%20financial%20symbols%2C%20vibrant%20teal%20and%20green%20colors%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20modern%20design&width=80&height=80&seq=calc1&orientation=squarish" alt="Getting Started" class="w-full h-full object-cover rounded-xl">
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-2">Use the Getting Started</h3>
+                            <p class="text-sm text-gray-600">flow to work out where you stand</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-white rounded-xl shadow-sm flex items-center justify-center">
+                                <img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%20star%20badge%20with%20financial%20growth%20elements%2C%20vibrant%20green%20and%20gold%20colors%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20achievement%20style&width=80&height=80&seq=star1&orientation=squarish" alt="Master Finances" class="w-full h-full object-cover rounded-xl">
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-2">Master your finances with our clear</h3>
+                            <p class="text-sm text-gray-600">and practical guides</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 bg-white rounded-xl shadow-sm flex items-center justify-center">
+                                <img src="https://readdy.ai/api/search-image?query=icon%2C%203D%20cartoon%20newsletter%20document%20with%20notification%20bell%2C%20vibrant%20orange%20and%20red%20colors%2C%20the%20icon%20should%20take%20up%2070%25%20of%20the%20frame%2C%20isolated%20on%20white%20background%2C%20centered%20composition%2C%20soft%20lighting%2C%20communication%20style&width=80&height=80&seq=news1&orientation=squarish" alt="Latest News" class="w-full h-full object-cover rounded-xl">
+                            </div>
+                            <h3 class="font-semibold text-gray-900 mb-2">Get the latest personal finance news</h3>
+                            <p class="text-sm text-gray-600">that actually matters</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Browse by Category -->
+                <section class="mb-16">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse by category</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20financial%20budgeting%20pattern%20with%20calculator%20elements%2C%20money%20symbols%2C%20and%20geometric%20shapes%20in%20vibrant%20green%20and%20teal%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20clean%20composition%20with%20financial%20icons&width=200&height=200&seq=budget1&orientation=squarish" alt="Budgeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Budgeting
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Track and plan your monthly spending and income targets</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20insurance%20protection%20pattern%20with%20shield%20elements%2C%20safety%20symbols%2C%20and%20security%20icons%20in%20vibrant%20blue%20and%20cyan%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20professional%20composition&width=200&height=200&seq=insurance1&orientation=squarish" alt="Insurance" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Insurance
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Compare insurance to protect yourself against unexpected costs</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20savings%20pattern%20with%20piggy%20bank%20elements%2C%20coin%20stacks%2C%20and%20growth%20symbols%20in%20vibrant%20pink%20and%20purple%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20wealth%20building%20theme&width=200&height=200&seq=saving1&orientation=squarish" alt="Saving" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">Saving</h3>
+                                <p class="text-sm text-gray-600">Learn how to save money and make your savings work</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20investing%20pattern%20with%20growth%20charts%2C%20stock%20market%20elements%2C%20and%20upward%20trending%20arrows%20in%20vibrant%20orange%20and%20yellow%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20investment%20theme&width=200&height=200&seq=investing1&orientation=squarish" alt="Investing" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Investing
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Understand investing to grow your wealth over time</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20debt%20management%20pattern%20with%20credit%20card%20elements%2C%20payment%20symbols%2C%20and%20financial%20relief%20icons%20in%20vibrant%20red%20and%20coral%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20debt%20solution%20theme&width=200&height=200&seq=debt1&orientation=squarish" alt="Debt Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Debt Management
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Helping you take control of your debt and achieve your financial wellbeing</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20economics%20pattern%20with%20market%20trends%2C%20economic%20indicators%2C%20and%20financial%20analysis%20elements%20in%20vibrant%20blue%20and%20indigo%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20economic%20theme&width=200&height=200&seq=economics1&orientation=squarish" alt="Economics" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Economics
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Learn key terms and wider trends which influence your personal finances</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20employment%20pattern%20with%20career%20growth%20elements%2C%20job%20search%20symbols%2C%20and%20professional%20development%20icons%20in%20vibrant%20green%20and%20emerald%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20career%20theme&width=200&height=200&seq=employment1&orientation=squarish" alt="Employment" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 flex items-center">
+                                    Employment
+                                    <div class="w-5 h-5 ml-2 bg-primary rounded-full flex items-center justify-center">
+                                        <i class="ri-check-line text-white text-xs"></i>
+                                    </div>
+                                </h3>
+                                <p class="text-sm text-gray-600">Your income, rights, and benefits from work and employment</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                            <div class="aspect-square overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Creative%20extra%20income%20pattern%20with%20side%20hustle%20elements%2C%20multiple%20revenue%20streams%2C%20and%20earning%20opportunity%20icons%20in%20vibrant%20purple%20and%20magenta%20colors%2C%20modern%20abstract%20design%20suitable%20for%20category%20card%2C%20income%20theme&width=200&height=200&seq=extraincome1&orientation=squarish" alt="Extra Income" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2">Extra income and savings</h3>
+                                <p class="text-sm text-gray-600">Explore extra income ideas and money saving tips for everyday life</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Popular Section -->
+                <section class="mb-16">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Popular</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20financial%20advisor%20reviewing%20investment%20documents%20and%20mutual%20fund%20reports%2C%20modern%20office%20setting%20with%20charts%20and%20graphs%2C%20business%20professional%20atmosphere%2C%20high%20quality%20photography&width=300&height=200&seq=article1&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">25 Liquid Mutual Swap Fund Reinvestment Award Takings</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Financial%20planning%20consultation%20with%20professional%20advisor%2C%20client%20meeting%20with%20investment%20documents%2C%20modern%20financial%20services%20office%2C%20professional%20business%20photography&width=300&height=200&seq=article2&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">A Proficient From Dolor Sanctus Est Assumenda Vel</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Investment%20portfolio%20analysis%20with%20financial%20charts%20and%20performance%20metrics%2C%20professional%20financial%20planning%20session%2C%20modern%20wealth%20management%20office%2C%20business%20photography&width=300&height=200&seq=article3&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">Possimus Nihil Ut Sit Aliquam Sanctus Vel</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Personal%20finance%20education%20seminar%20with%20investment%20strategies%20presentation%2C%20professional%20financial%20advisor%20teaching%2C%20modern%20conference%20room%20setting%2C%20educational%20photography&width=300&height=200&seq=article4&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">Eleifend Amet Possimus Etiam</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Latest Section -->
+                <section class="mb-16">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Latest</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Modern%20cryptocurrency%20trading%20platform%20interface%20showing%20Bitcoin%20and%20digital%20asset%20portfolio%20management%2C%20professional%20fintech%20application%2C%20clean%20UI%20design%20with%20charts%20and%20market%20data&width=300&height=200&seq=latest1&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">25 Liquid Mutual Swap Fund Reinvestment Award Takings</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Real%20estate%20investment%20analysis%20with%20property%20valuation%20documents%2C%20mortgage%20calculations%2C%20and%20housing%20market%20trends%2C%20professional%20real%20estate%20finance%20consultation%2C%20business%20photography&width=300&height=200&seq=latest2&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">Eleifend Amet Possimus Etiam</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                            <div class="aspect-video overflow-hidden rounded-t-xl">
+                                <img src="https://readdy.ai/api/search-image?query=Retirement%20planning%20consultation%20with%20pension%20fund%20analysis%2C%20elderly%20couple%20meeting%20financial%20advisor%2C%20retirement%20savings%20strategy%20discussion%2C%20professional%20financial%20services%20photography&width=300&height=200&seq=latest3&orientation=landscape" alt="Article" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-900 mb-2 text-sm leading-tight">Dolore Graphicus Nam Massa Vel Tempor</h3>
+                                <p class="text-xs text-gray-500">By author</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-80">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-24">
+                    <h3 class="text-lg font-bold text-gray-900 mb-6">Categories</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center px-4 py-3 bg-primary text-white rounded-lg cursor-pointer">
+                            <span class="font-medium">Banking</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-primary text-white rounded-lg cursor-pointer">
+                            <span class="font-medium">Budgeting</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Credit Cards</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Cryptocurrency</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Debt Management</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Economics</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Employment</span>
+                        </a>
+                        <a href="#" class="flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer">
+                            <span class="font-medium">Extra income and savings</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-['Pacifico'] text-gray-900">PUFFER</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 max-w-md">
+                        Everything personal finance - explained, reviewed and compared in simple terms. Fast and digestible.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 cursor-pointer">
+                            <i class="ri-facebook-fill text-gray-600"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 cursor-pointer">
+                            <i class="ri-twitter-fill text-gray-600"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 cursor-pointer">
+                            <i class="ri-linkedin-fill text-gray-600"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Getting Started</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Categories</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">News</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Help Center</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary cursor-pointer">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8">
+                <p class="text-center text-gray-500 text-sm">
+                    © 2025 PUFFER. All rights reserved | Developed by Md Shamim Ahmed
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="navigation-toggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.md\\:hidden button');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-2 hidden';
+            mobileMenu.innerHTML = `
+                <a href="#" class="block px-3 py-2 text-gray-900 hover:text-primary cursor-pointer">Getting started</a>
+                <a href="#" class="block px-3 py-2 text-gray-500 hover:text-primary cursor-pointer">Categories</a>
+                <a href="#" class="block px-3 py-2 text-gray-500 hover:text-primary cursor-pointer">News</a>
+                <div class="pt-4">
+                    <input type="text" placeholder="Search..." class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+            `;
+            
+            menuButton.parentNode.parentNode.parentNode.appendChild(mobileMenu);
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="smooth-scrolling">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="newsletter-form">
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.flex.flex-col.sm\\:flex-row.gap-4');
+            const emailInput = form.querySelector('input[type="email"]');
+            const submitButton = form.querySelector('button');
+            
+            submitButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = emailInput.value.trim();
+                
+                if (!email) {
+                    showNotification('Please enter your email address', 'error');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    showNotification('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                submitButton.textContent = 'Subscribing...';
+                submitButton.disabled = true;
+                
+                setTimeout(() => {
+                    showNotification('Thank you for subscribing!', 'success');
+                    emailInput.value = '';
+                    submitButton.textContent = 'Subscribe';
+                    submitButton.disabled = false;
+                }, 1500);
+            });
+            
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+            
+            function showNotification(message, type) {
+                const notification = document.createElement('div');
+                notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white z-50 ${type === 'success' ? 'bg-primary' : 'bg-red-500'}`;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            }
+        });
+    </script>
+
+    <script id="category-interactions">
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryCards = document.querySelectorAll('.grid.grid-cols-2.md\\:grid-cols-4.gap-6 > div');
+            const sidebarLinks = document.querySelectorAll('aside a');
+            
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const categoryName = this.querySelector('h3').textContent.trim();
+                    showNotification(`Exploring ${categoryName} category`, 'info');
+                });
+            });
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sidebarLinks.forEach(l => {
+                        l.className = 'flex items-center px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 cursor-pointer';
+                    });
+                    this.className = 'flex items-center px-4 py-3 bg-primary text-white rounded-lg cursor-pointer';
+                });
+            });
+            
+            function showNotification(message, type) {
+                const notification = document.createElement('div');
+                notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg text-white z-50 ${type === 'info' ? 'bg-blue-500' : 'bg-primary'}`;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 2000);
+            }
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '-ZN5R23UU3Z68Fmi4aZnMA';
+    window.host = 'readdy.ai';
+</script>
+</body>
+</html>
